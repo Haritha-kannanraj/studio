@@ -1,0 +1,262 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Merriweather', sans-serif;
+  overflow: hidden;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  overflow: hidden;
+}
+
+
+.login-wrapper{
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-wrapper{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.5);
+
+}
+
+.form::before{
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 50%;
+  height: 100%;
+  transform: skewX(-26deg);
+  transform-origin: bottom left;
+  background: rgba(255, 255, 255,0.02);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+
+
+#forgot-password{
+  display: none;
+}
+
+.form h2{
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Bodoni' , serif;
+  margin-top:-1em;
+  margin-bottom:0.5em;
+}
+
+.form h4{
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: 'Bodoni' , serif;
+}
+
+.form .control{
+  position: relative;
+}
+
+
+
+.form .control input{
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1rem;
+  color: inherit;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.1);
+  border:none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  margin-bottom: : 30px;
+}
+
+.form .control  label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+}
+
+.form .control input:focus + label,.form .control  input:valid + label{
+  transform: translateY(-18px);
+  font-size:0.8rem;
+}
+
+
+
+
+.submit-btn{
+  display:block;
+  margin-left: auto;
+  border:none;
+  outline:none;
+  font-size: 1rem;
+  background: rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+  color: inherit;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+.submit-btn:hover{
+  background: #fbfcfd;
+  color: #000;
+
+}
+
+.forgot-psw{
+  color: inherit;
+}
+
+#forgot-password{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 1;
+  background-image: url(images/background.png);
+  background-size: cover;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+#forgot-password:target{
+  height: 100%;
+  opacity: 1;
+
+}
+
+.close{
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color:inherit;
+}
+
+
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -70px;
+}
+
+@keyframes bubble {
+  0% {
+    transform:translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform:translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 25px;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 25px;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 6s;
+  width: 20px;
+}
+.bubbles img:nth-child(7){
+  animation-delay: 7s;
+  width: 35px;
+}
+
+.navbar{
+  width: 85%;
+  height: 15%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width:100px;
+  cursor: pointer;
+}
+
+.button1{
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+  margin-left: 95%;
+}
+
+a{
+  text-decoration:none;
+  color:#fff;
+}
